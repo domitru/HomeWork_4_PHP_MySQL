@@ -1,6 +1,6 @@
 -- create
 CREATE TABLE INFO_PERSONS (
-    empId INTEGER PRIMARY KEY,
+    empId INTEGER PRIMARY KEY AUTO_INCREMENT,
     name TEXT NOT NULL,
     age TEXT NOT NULL,
     address TEXT NOT NULL
@@ -25,8 +25,9 @@ VALUES (0008, 'Dmitry', '29', 'Moskva');
 -- fetch 
 SELECT name
 FROM INFO_PERSONS
-WHERE age BETWEEN 18 AND 30 - 1   --  или записать так BETWEEN 18 AND 29
-    AND address = 'Moskva'
+WHERE age >= 18  AND age < 30   --  или записать так BETWEEN 18 AND 29
+    AND address = 'Moskva'        --  или WHERE age BETWEEN 18 AND 30 - 1
+
 
 
 -- 2. Создать файл my.sql,
